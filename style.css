@@ -1,0 +1,226 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root {
+  --animate-duration: 0.5s;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: linear-gradient(
+    to bottom,
+    hsl(240, 73%, 65%) 10%,
+    hsl(273, 75%, 66%) 100%
+  );
+  font-family: "Kumbh Sans", sans-serif;
+  line-height: 2;
+  text-align: center;
+}
+
+.card {
+  background-color: white;
+  border-radius: 5%;
+  box-shadow: 0 20px 15px rgba(0, 0, 0, 0.2);
+  margin: 165px auto;
+  width: 80%;
+}
+
+/********************IMG-SIDE********************/
+
+.img-side {
+  position: relative;
+}
+
+.woman-img-pc {
+  display: none;
+}
+
+.woman-img-mob {
+  position: absolute;
+  top: -95%;
+  left: 0;
+}
+
+.shadow-img-pc {
+  display: none;
+}
+
+.design-box {
+  display: none;
+}
+
+/********************FAQ-SIDE********************/
+
+.faq-side {
+  padding-bottom: 4rem;
+  margin: auto;
+  position: relative;
+}
+
+.faq-side h1 {
+  padding: 1rem 0 0.5rem 0;
+}
+
+.faq-side h3 {
+  color: hsl(237, 12%, 33%);
+  font-size: 12px;
+  text-align: left;
+  margin: auto;
+  width: 85%;
+}
+
+.faq-side p {
+  color: hsl(238, 29%, 16%);
+  font-size: 12px;
+  text-align: left;
+  margin: auto;
+  width: 70%;
+  display: none;
+}
+
+.faq-side h3 span {
+  position: absolute;
+  right: 8%;
+  transition: all 0.3s ease-in-out;
+}
+
+.faq-side h3 span img {
+  color: hsl(14, 88%, 65%);
+}
+
+hr {
+  margin: 1rem auto;
+  background-color: hsl(240, 5%, 91%);
+  width: 85%;
+}
+
+/*************CLASSES USED IN JS *******************/
+
+.normal {
+  font-weight: normal;
+}
+
+.bold {
+  font-weight: bold !important;
+}
+
+.arrow {
+  transform: rotate(180deg);
+}
+
+.show {
+  display: block !important;
+}
+
+/*****************MEDIA-QUERY*******************/
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .woman-img-mob {
+    left: 20%;
+  }
+
+  .faq-side p {
+    margin-top: 0.5rem;
+    width: 80%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .woman-img-mob {
+    left: 26%;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .card {
+    display: flex;
+    padding: 4rem 0;
+  }
+
+  /* Image side */
+
+  .img-side {
+    width: 50%;
+    position: relative;
+    left: -3%;
+  }
+
+  /* hide phone sized images */
+  .woman-img-mob {
+    display: none;
+  }
+
+  .shadow-img-mob {
+    display: none;
+  }
+
+  /* display pc sized images */
+  .woman-img-pc {
+    display: block;
+    position: absolute;
+  }
+
+  .shadow-img-pc {
+    display: block;
+  }
+
+  .design-box {
+    display: block;
+    position: absolute;
+    top: 25%;
+    left: -15%;
+  }
+
+  /* faq side */
+  .faq-side {
+    padding-bottom: 0;
+    width: 45%;
+  }
+
+  .faq-side h1 {
+    text-align: left;
+    margin: auto;
+    width: 85%;
+    font-size: 28px;
+    padding-bottom: 1rem;
+  }
+
+  .faq-side h3 {
+    width: 80%;
+    font-size: 13px;
+  }
+
+  .faq-side h3 span {
+    right: 12%;
+  }
+
+  hr {
+    width: 80%;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .design-box {
+    top: 28%;
+    left: -13%;
+  }
+}
